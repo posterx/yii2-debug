@@ -47,7 +47,7 @@ class DefaultController extends CController
 	public function actionIndex()
 	{
 		$this->render('index', array(
-            new CArrayDataProvider($this->getManifest(), ['pagination' => ['pageSize' => 20]])
+            'manifest' => new CArrayDataProvider($this->getManifest(), ['pagination' => ['pageSize' => 20]])
 		));
 	}
 
