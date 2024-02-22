@@ -32,7 +32,7 @@ $this->pageTitle = 'Available Debug Data - Yii Debugger';
 				</tr>
 				</thead>
 				<tbody>
-				<?php foreach ($manifest as $tag => $data): ?>
+				<?php foreach ($manifest->data as $tag => $data): ?>
 					<tr>
 						<td style="text-align:center;">
 							<?php echo CHtml::link(
@@ -56,6 +56,10 @@ $this->pageTitle = 'Available Debug Data - Yii Debugger';
 				<?php endforeach; ?>
 				</tbody>
 			</table>
+
+            <div class="pagination">
+                <?php $this->widget('LinkPager', ['pages' => $manifest->pagination]) ?>
+            </div>
 		</div>
 	</div>
 </div>
